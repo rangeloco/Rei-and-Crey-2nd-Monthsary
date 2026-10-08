@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Monthsary, Rei! ❤️</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff9f9;
+            color: #4a3b32;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Romantic Transitions & Fade-in Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s ease-out;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Section 1: Hero Page */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, #ffe3e3, #fff9f9);
+            padding: 20px;
+        }
+        .floating-heart {
+            font-size: 5rem;
+            color: #ff4d6d;
+            animation: heartbeat 1.5s infinite;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #c9184a;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: #594236;
+            margin-bottom: 30px;
+        }
+        .scroll-btn {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+            transition: all 0.3s ease;
+        }
+        .scroll-btn:hover {
+            background-color: #c9184a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 77, 109, 0.5);
+        }
+
+        /* Video Showcase Section */
+        .video-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .video-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(164, 19, 60, 0.15);
+            background: #000;
+            margin-top: 20px;
+        }
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Section 2: Memories Layout */
+        .memories {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #c9184a;
+            margin-bottom: 40px;
+        }
+        .featured-photo-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #ffe3e3;
+            max-width: 500px;
+            margin: 0 auto;
+            transition: transform 0.4s ease;
+        }
+        .featured-photo-card:hover {
+            transform: scale(1.02);
+        }
+        .featured-photo-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Section 3: The Love Letter Reveal */
+        .letter-section {
+            background-color: #ffe3e3;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .envelope {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        .envelope:hover {
+            transform: scale(1.02);
+        }
+        .envelope-preview-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #c9184a;
+        }
+        .letter-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.8s ease-in-out;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #4a3b32;
+            padding-top: 0;
+        }
+        .envelope.open .letter-content {
+            max-height: 1000px;
+            opacity: 1;
+            padding-top: 30px;
+        }
+        .envelope.open .envelope-preview-text {
+            display: none;
+        }
+
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a4133c;
+            background-color: #fff9f9;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.15); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.15); }
+            80% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="floating-heart">❤️</div>
+        <h1>Happy 2nd Monthsary!</h1>
+        <p>REI & CREY • TWO MONTHS OF PURE HAPPINESS</p>
+        <a href="#our-moment" class="scroll-btn">See Our Surprise</a>
+    </section>
+
+    <!-- VIDEO PLAYER SECTION (Fades in) -->
+    <section id="our-moment" class="video-section fade-in">
+        <h2>A Special Video For You 🎥</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="our-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- PHOTO MEMORY SECTION (Fades in) -->
+    <section class="memories fade-in">
+        <h2>My Favorite View Is You ✨</h2>
+        <div class="featured-photo-card">
+            <img src="us.jpg.jpg" alt="Our Memory">
+            <h3>Two Months Down, Forever to Go</h3>
+            <p style="margin-top: 10px; color: #6c584c; font-size: 0.95rem;">Every single day spent with you is a blessing. Thank you for making me the happiest person.</p>
+        </div>
+    </section>
+
+    <!-- LOVE LETTER SECTION (Fades in) -->
+    <section class="letter-section fade-in">
+        <h2>A Little Message For You</h2>
+        <div class="envelope" id="loveEnvelope" onclick="revealLetter()">
+            <div class="envelope-preview-text">✉️ Click to open your letter...</div>
+            <div class="letter-content">
+                "Happy 2nd monthsary, my love! <br><br>
+                Thank you for the past two months of absolute magic. You bring so much peace, laughter, and joy into my life, and I am incredibly grateful for every single moment we share. <br><br>
+                Here is to us, to today, and to many more beautiful memories ahead. I love you, Rei!"
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ by Crey | Happy Monthsary</p>
+    </footer>
+
+    <script>
+        // Scroll fade-in transition logic
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const appearanceOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+
+        const appearanceObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearanceOptions);
+
+        fadeElements.forEach(element => { appearanceObserver.observe(element); });
+
+        // Letter Open logic
+        function revealLetter() {
+            document.getElementById('loveEnvelope').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
